@@ -1,8 +1,17 @@
 connectDB <- function(){
   driver <- dbDriver('PostgreSQL')
   
+  # DB <- dbConnect(
+  #   driver, dbname="hospital", host="localhost",port=5433,user="postgres", password="root"
+  # )
+  
   DB <- dbConnect(
-    driver, dbname="hospital", host="localhost",port=5433,user="postgres", password="root"
+    driver,
+    dbname="ywvpyrxw", # User & Default database
+    host="topsy.db.elephantsql.com", # Server
+    # port=5433,
+    user="ywvpyrxw", # User & Default database
+    password="fAPCgC4Oi8OCqQVgn8drpRrgEDUz_yB5" # Password
   )
 }
 
