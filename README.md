@@ -68,7 +68,57 @@ Dokumentasi penggunaan aplikasi database. Anda dapat juga membuat dokumentasi li
 
 ## :heavy_check_mark: Deskripsi Data
 
-Berisi tentang tabel-tabel yang digunakan berikut dengan sintaks SQL DDL (CREATE)
+Berisi tentang tabel-tabel yang digunakan berikut dengan sintaks SQL DDL (CREATE).
+
+Contoh:
+
+### 1. Tabel *yo_user*
+
+Tabel *yo_user* merupakan tabel yang memuat data demografi panelis, adapun detail atribut dan deskripsi dari masing-masing adalah sebagai berikut:
+
+| Attribute    | Type                  | Description                     |
+|:-------------|:----------------------|:--------------------------------|
+| id           | character varying(10) | Id panelis                      |
+| uid          | character varying(8)  | Unique id panelis               |
+| username     | character varying(30) | Username                        |
+| firstname    | character varying(15) | Firstname                       |
+| lastname     | character varying(15) | Lastname                        |
+| gender       | smallint              | Jenis kelamin                   |
+| province_id  | character varying(10) | Asal provinsi                   |
+| city_id      | character varying(10) | Asal kota                       |
+| birthdate    | timestamp             | Tanggal lahir                   |
+| linkshare_id | character varying(10) | Informasi join melalui campaign |
+
+### Create Table yo_user
+
+```sql
+CREATE TABLE IF NOT EXISTS public.yo_user
+(
+    id character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    uid character varying(8) COLLATE pg_catalog."default" NOT NULL,
+    username character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    firstname character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    lastname character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    gender smallint DEFAULT '0'::smallint,
+    province_id character varying(10) COLLATE pg_catalog."default" NOT NULL DEFAULT 0,
+    city_id character varying(10) COLLATE pg_catalog."default" NOT NULL DEFAULT 0,
+    birthdate timestamp without time zone,
+    linkshare_id character varying(10) COLLATE pg_catalog."default" NOT NULL DEFAULT '0'::smallint,
+    CONSTRAINT yo_user_pkey PRIMARY KEY (id),
+    CONSTRAINT yo_user_city_id_fkey FOREIGN KEY (city_id)
+        REFERENCES public.yo_region_city (city_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT yo_user_linkshare_id_fkey FOREIGN KEY (linkshare_id)
+        REFERENCES public.yo_linkshare (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT yo_user_province_id_fkey FOREIGN KEY (province_id)
+        REFERENCES public.yo_region_province (id_province) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+);
+```
 
 ## :open_file_folder: Struktur Folder
 
