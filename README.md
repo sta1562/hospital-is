@@ -22,10 +22,10 @@
 - [Demo](#dvd-demo)
 - [Dokumentasi](#blue_book-documentation)
 - [Requirements](#exclamation-requirements)
-- [Installation and usage](#floppy_disk-skema-database)
-- [Tests](#rotating_light-erd)
-- [Dependencies and libs](#heavy_check_mark-deskripsi-data)
-- [Folder Structure](#open_file_folder-stuktur-folder)
+- [Skema Database](#floppy_disk-skema-database)
+- [ERD](#rotating_light-erd)
+- [Deskripsi Data](#heavy_check_mark-deskripsi-data)
+- [Struktur Folder](#open_file_folder-stuktur-folder)
 - [Tim Pengembang](#smiley_cat-tim-pengembang)
 
 ## :scroll: Tentang
