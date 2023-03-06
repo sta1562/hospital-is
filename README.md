@@ -22,15 +22,11 @@
 - [Demo](#dvd-demo)
 - [Dokumentasi](#blue_book-documentation)
 - [Requirements](#exclamation-requirements)
-- [Installation and usage](#floppy_disk-installation-and-usage)
-  - [Tests](#rotating_light-tests)
-  - [Dependencies and libs](#heavy_check_mark-dependencies-and-libs)
-  - [Folder Structure](#open_file_folder-folder-structure)
-- [Release History](#gift-release-history)
-- [Contributing](#heart_eyes_cat-contributing)
-  - [Tasks](#bell-tasks)
-- [License](#memo-license)
-- [Author](#smiley_cat-author)
+- [Installation and usage](#floppy_disk-skema-database)
+- [Tests](#rotating_light-erd)
+- [Dependencies and libs](#heavy_check_mark-deskripsi-data)
+- [Folder Structure](#open_file_folder-stuktur-folder)
+- [Tim Pengembang](#smiley_cat-tim-pengembang)
 
 ## :scroll: Tentang
 
@@ -68,13 +64,13 @@ Dokumentasi penggunaan aplikasi database. Anda dapat juga membuat dokumentasi li
 
 ## :rotating_light: ERD
 
-<img width="242" alt="skema update" src="https://user-images.githubusercontent.com/111562803/223139863-0f7b7950-6586-49aa-9e6c-5c756d2a0375.png">
+<img width="242" alt="skema update" src="https://github.com/Kelompok4MDS/Project-Praktikum-MDS/blob/main/ERD%20Liga%20Inggris.png?raw=true">
 
-### :heavy_check_mark: Deskripsi Data
+## :heavy_check_mark: Deskripsi Data
 
 Berisi tentang tabel-tabel yang digunakan berikut dengan sintaks SQL DDL (CREATE)
 
-### :open_file_folder: Folder Structure
+## :open_file_folder: Struktur Folder
 
 ```
 .
